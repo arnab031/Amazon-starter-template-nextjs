@@ -18,9 +18,9 @@ function Checkout() {
 
       <main className="lg:flex max-w-screen-2xl mx-auto">
         {/* Left */}
-        <div className="flex-grow m-5 shadow-sm md:w-11/12">
+        <div className="flex-grow m-5 shadow-sm lg:w-11/12">
           <Image
-            src="https:links.papareact.com/ikj"
+            src="https://links.papareact.com/ikj"
             width={1020}
             height={250}
             objectFit="contain"
@@ -48,13 +48,13 @@ function Checkout() {
           </div>
         </div>
         {/* Right */}
-        <div className="flex md:w-1/5 flex-col bg-white p-10 shadow-md">
+        <div className="flex lg:w-1/5 flex-col bg-white p-10 shadow-md">
           {items.length > 0 && (
             <>
               <h2>
                 Subtotal ({items.length} items):{" "}
                 <span className="font-bold">
-                  <Currency quantity={total} currency="INR"/>
+                  <Currency quantity={total} currency="INR" />
                 </span>
               </h2>
               <button
