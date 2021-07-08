@@ -49,7 +49,7 @@ export default async (req, res) => {
         const session = event.data.object;
 
         //Fulfill the order
-        return fulfillOrder(session).then(()=>res.status(200)).catch(err=>res.status(400).send(`Webhook Error: ${err.message}`));
+        return fulfillOrder(session).then(()=>res.status(200).json({received:true})).catch(err=>res.status(400).send(`Webhook Error: ${err.message}`));
     }
   }
 };
